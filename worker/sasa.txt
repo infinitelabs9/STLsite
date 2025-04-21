@@ -1,2 +1,1 @@
-Assigned task: Css
-Expected contribution: 25%
+Individual Page: user_page.html, login.html, register.html, sasastyles.css

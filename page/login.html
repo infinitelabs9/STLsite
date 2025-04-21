@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Movie Place</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sasastyles.css">
+</head>
+<body>
+
+    <!-- Header with Logo -->
+    <header class="header">
+        <div class="nav">
+            <a href="../index.html" class="logo-color"> <!-- Link to user_page.html -->
+                <img src="../uploads/logo.png" alt="User Logo" class="logo-img">
+            </a>
+            <div class="nav-content">
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <div class="details-container">
+        <div class="form-container">
+            <h2>Login to Your Account</h2>
+            <form action="user_page.html" method="POST">
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+            <div class="form-footer">
+                Don't have an account? <a href="register.html">Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with Bigger Logo -->
+    <footer class="footer">
+        <img src="../uploads/logo.png" alt="Footer Logo" class="footer-logo">
+        <p>&copy; POP TIME | BY SML</p>
+    </footer>
+
+</body>
+</html>
