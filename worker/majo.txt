@@ -1,2 +1,2 @@
-Assigned task: Css
-Expected contribution: 25%
+Individual Page: detail.html
+Group work: index.html
