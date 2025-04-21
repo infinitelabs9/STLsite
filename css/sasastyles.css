@@ -2,13 +2,13 @@
 
 /* Root Variables */
 :root {
-  --primary-bg: #2f4156;
-  --secondary-bg: #34495e;
+  --primary-bg: #19232e;
+  --secondary-bg: #19232e;
   --accent: #d1c32d;
   --accent-hover: #f5995c;
   --text-light: #ecf0f1;
   --text-muted: #bdc3c7;
-  --card-bg: #2d3c4c;
+  --card-bg: #212e3b;
   --input-bg: #34495e;
   --button-bg: #d1c32d;
   --button-hover: #b00610;

@@ -254,7 +254,7 @@ a {
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #212e3b;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
@@ -263,7 +263,7 @@ a {
 .form-container h2 {
   margin-bottom: 20px;
   font-size: 1.5em;
-  color: #333;
+  color: #d1c32d;
 }
 
 form {
@@ -275,13 +275,13 @@ form {
 label {
   text-align: left;
   font-weight: bold;
-  color: #555;
+  color: #e6dede;
 }
 
 input, textarea {
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #ddd;
+  border: 1px solid #777272;
   border-radius: 4px;
   outline: none;
   transition: border-color 0.3s;
