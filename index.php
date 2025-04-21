@@ -1,6 +1,78 @@
 <?php
-    require 'includes/getMovie.php';
-    $result = getMovie();
+    $movies = [
+        [
+            'movieId' => 1,
+            'title' => 'Inception',
+            'rating' => '8.8',
+            'genres' => 'Action, Sci-Fi',
+            'duration' => '148',
+            'year' => '2010',
+            'imagePath' => 'uploads/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg'
+        ],
+        [
+            'movieId' => 2,
+            'title' => 'Interestellar',
+            'rating' => '8.7',
+            'genres' => 'Action, Sci-Fi',
+            'duration' => '169',
+            'year' => '2014',
+            'imagePath' => 'uploads/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg'
+        ],
+        [
+            'movieId' => 3,
+            'title' => 'Matilda',
+            'rating' => '7.0',
+            'genres' => 'Family, Comedy',
+            'duration' => '98',
+            'year' => '1996',
+            'imagePath' => 'uploads/MV5BYWE3ZDMzMmEtODgwNi00NzMxLThkYWItMTAzMWUyMzI1NDQ1XkEyXkFqcGc@._V1_.jpg'
+        ],
+        [
+            'movieId' => 4,
+            'title' => 'Wicked',
+            'rating' => '7.5',
+            'genres' => 'Fantasy, Musical',
+            'duration' => '160',
+            'year' => '2024',
+            'imagePath' => 'uploads\81cmJpAKEVL._AC_UF894,1000_QL80_.jpg'
+        ],
+        [
+            'movieId' => 5,
+            'title' => 'The Wild Robot',
+            'rating' => '8.2',
+            'genres' => 'Animation, Sci-Fi',
+            'duration' => '102',
+            'year' => '2024',
+            'imagePath' => 'uploads/The_Wild_Robot_poster.jpg'
+        ],
+        [
+            'movieId' => 6,
+            'title' => 'Sinners',
+            'rating' => '8.2',
+            'genres' => 'Action, Supernatural Horror',
+            'duration' => '137',
+            'year' => '2025',
+            'imagePath' => 'uploads/Sinners_(2025_film)_poster.jpg'
+        ],
+        [
+            'movieId' => 7,
+            'title' => 'Companion',
+            'rating' => '7.0',
+            'genres' => 'Psychological Thriller, Sci-Fi',
+            'duration' => '97',
+            'year' => '2025',
+            'imagePath' => 'uploads/Companion_film_poster.jpg'
+        ],
+        [
+            'movieId' => 8,
+            'title' => 'Mickey 17',
+            'rating' => '6.9',
+            'genres' => 'Dark Comedy, Sci-Fi',
+            'duration' => '137',
+            'year' => '2025',
+            'imagePath' => 'uploads/Mickey_17_film_poster.png'
+        ],
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -20,29 +92,8 @@
     <header class="header">
         <div class="nav">
             <div class="logo">
-                <a href="index.php"><span class="logo-color">MyMovie</span>List</a>
-            </div>
-
-            <nav class="nav-content">
-                <a href="#">Watched</a>
-                <a href="#">Pending</a>
-                <a href="#">Favorites</a>
-            </nav>
-        </div>
-
-        <div class="user">
-            <div class="user-img">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                    <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-                    <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
-                </svg>
-            </div>
-            <div class="name">
-                <p>User name</p>
-            </div>
-        </div>
+                <a href="index.php"><span class="logo-color">Our</span>Project</a>
+            
     </header>
 
     <?php if (isset($_GET['message'])): ?>
@@ -50,7 +101,7 @@
     <?php endif; ?>
 
     <main class="main">
-        <h1 class="main-title">My Movies</h1>
+        <h1 class="main-title"> Movies</h1>
         <a class="add-movie" href="pages/addmovie.php">Add Movie</a>
     </main>
 
@@ -79,13 +130,13 @@
     <div class="catalog-container">
         <div class="grid-container">
             <?php
-            if ($result) {
-                while ($movie = mysqli_fetch_assoc($result)) {
+            if (!empty($movies)) {
+                foreach ($movies as $movie) {
             ?>
                 <div class='movie-card'>
                     <div class="image-container">
                         <a href="pages/details.php?movieId=<?php echo $movie['movieId']?>" class="details">Details</a>
-                        <img class="card-image" src="<?php echo $movie['imagePath']; ?>">
+                        <img class="card-image" src="<?php echo $movie['imagePath']; ?>" alt="Movie Image">
                     </div>
                     <div class="movie-content">
                         <h3><?php echo $movie['title']; ?></h3>
@@ -107,7 +158,7 @@
     </div>
 
     <footer class="footer section">
-        <p>&copy; 2024 All rights reserved.</p>
+        <p>&copy; 2025 All rights reserved.</p>
     </footer>
 
     <script src="js/modernizr.js"></script>
