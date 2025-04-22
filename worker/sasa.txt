@@ -1,1 +1,2 @@
 Individual Page: user_page.html, login.html, register.html, sasastyles.css
+Group work: index.html

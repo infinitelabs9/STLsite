@@ -1,1 +1,2 @@
-Individual Page: addmovie.html 
+Individual Page: addmovie.html
+Group work: index.html
